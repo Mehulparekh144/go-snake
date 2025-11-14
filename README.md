@@ -1,15 +1,12 @@
-# 🐍 Snake Game
+# Snake Game
 
-A classic Snake game written in Go with a terminal-based interface. Control the snake using WASD keys, eat apples to grow, and try to beat your best score!
+A simple Snake game written in Go. Use WASD to control the snake, eat apples to grow, and try to beat your best score.
 
 ## Features
 
-- 🎮 Classic Snake gameplay
-- 📊 Score tracking with best score persistence
-- 🎯 Random apple generation
-- 🖥️ Terminal-based ASCII graphics
-- 💾 Automatic best score saving
-- 🚀 Cross-platform support (Linux, macOS, Windows)
+- Score tracking with best score saved to file
+- Terminal-based graphics
+- Works on Linux, macOS, and Windows
 
 ## Installation
 
@@ -43,22 +40,17 @@ go build -o snake ./cmd
 
 ## How to Play
 
-1. **Start the game**: Run the `snake` executable
-2. **Control the snake**: Use WASD keys to move
-   - `W` - Move up
-   - `A` - Move left
-   - `S` - Move down
-   - `D` - Move right
-3. **Eat apples**: Navigate the snake to the `*` (apple) to grow and increase your score
-4. **Avoid collisions**: Don't hit the walls or your own body!
-5. **Quit**: Press `CTRL+C` to exit the game
+- Use WASD keys to move (W=up, A=left, S=down, D=right)
+- Eat the `*` to grow and increase your score
+- Don't hit walls or yourself
+- Press CTRL+C to quit
 
 ## Game Rules
 
-- The snake starts with a length of 1
-- Each apple eaten increases your score by 1 and makes the snake grow
-- The game ends if the snake hits a wall or itself
-- Your best score is automatically saved to `score.txt`
+- Snake starts with length 1
+- Each apple increases score by 1 and makes the snake grow
+- Game ends if you hit a wall or yourself
+- Best score is saved to `score.txt`
 
 ## Project Structure
 
@@ -71,47 +63,19 @@ Snake/
 └── README.md            # This file
 ```
 
-## Building for Multiple Platforms
-
-This project uses [GoReleaser](https://goreleaser.com) for automated releases. To build for all platforms:
-
-```bash
-# Install GoReleaser (if not already installed)
-brew install goreleaser  # macOS
-# or download from https://goreleaser.com/install
-
-# Build and release
-goreleaser release --clean
-```
-
-## Development
-
-### Running Locally
-
-```bash
-go run ./cmd
-```
-
-### Building
+## Building
 
 ```bash
 go build -o snake ./cmd
 ```
 
+To build for multiple platforms, use [GoReleaser](https://goreleaser.com):
+
+```bash
+goreleaser release --clean
+```
+
 ## Requirements
 
 - Go 1.25.1+
-- A terminal that supports ANSI escape codes (most modern terminals)
-
-## License
-
-This project is open source and available for personal use.
-
-## Contributing
-
-Contributions are welcome! Feel free to open an issue or submit a pull request.
-
-## Acknowledgments
-
-- Classic Snake game mechanics
-- Built with Go for performance and cross-platform compatibility
+- A terminal that supports ANSI escape codes
