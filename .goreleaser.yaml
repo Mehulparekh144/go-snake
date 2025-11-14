@@ -52,9 +52,6 @@ archives:
 checksum:
   name_template: "checksums.txt"
 
-snapshot:
-  name_template: "{{ .Tag }}-next"
-
 changelog:
   sort: asc
   filters:
@@ -63,8 +60,11 @@ changelog:
       - "^test:"
 
 release:
+  github:
+    owner: Mehulparekh144
+    name: go-snake
   footer: >-
 
     ---
 
-    Released by [GoReleaser](https://github.com/Mehulparekh144/go-snake).
+    Released by [GoReleaser](https://github.com/goreleaser/goreleaser).
